@@ -20,7 +20,7 @@ export class Post {
     content?: string;
 
     @Column({type: 'int', nullable: true})
-    @Field(() => Int)
+    @Field(() => Int, { nullable: true })
     authorID: number;
 
     @ManyToMany(() => Author, author => author.posts)

@@ -22,6 +22,6 @@ export class CreatePostInput {
     content?: string;
 
     @IsInt({ message: 'El autorID debe ser un numero entero' })
-    @Field()
+    @Field({ nullable: true })
     authorID: number;
 }
